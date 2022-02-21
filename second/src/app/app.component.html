@@ -1,0 +1,7 @@
+<H1>jzfg</H1>
+<input (keyup)="changeImage($event)" [value]="imgUrl">
+<app-post [postUrl]="imgUrl" (imgSelected)="logImg($event)">
+    <p>
+        Some Content
+    </p>
+</app-post>
