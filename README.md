@@ -86,6 +86,25 @@ ngAfterViewInit() ->Called once after the first ngAfterContentChecked()
 ngAfterViewChecked() -> Called after the ngAfterViewInit() and every subsequent ngAfterContentChecked()
 ngOnDestroy() -> Called immediately before Angular destroys the directive or component.
 
+-1 constructor will rin
+-2 ngOnChanges will run
+-3 ngOnInit will run
+-4 ngDoCheck will run 
+-5 ngAfterContentInit will run
+-6 ngAfterContentChecked will run
+-7 ngAfterViewInit will run
+-8 ngAfterViewChecked will run
+-9 ngOnDestroy will run
+- componenet or directive distroy hone pr OnDestroy wala hook run hoga
+
+-> jitni b check wale hooks hai vo 2 bar run honge
+
+-> Most Commonly used hooks
+ngOnInit()
+ngOnChanges()
+ngOnDestroy()
+- Hooks jo ek se zyada bar run hote hai vo app ki performance pr impact krte hai.
+
 ngOnInit(){} //it runs when our component is initilize
 //OnInit is an interface
 //we can implements it in class
@@ -101,3 +120,26 @@ npm start- package.json me 'start' name ki property hai usme 'ng serve' value ha
 
 production buid types
 local(option),production,staging
+
+
+PIPE
+- curDate=new Date();
+{{curDate | date:'formate of the date eg. MMM d y'}} //output feb 22 2022
+there are some predefine formate for date eg. 'short' //it display M/d/yy, h:mm a
+
+json pipe -> it is use to display the object
+
+directives :
+there are two types of directives 
+1. attribute directive -> it focus on change the appearance or behavior of an element
+
+ngClass & ngStyle
+->app.componenet.html
+-[ngStyle]="{'background-color':color()}"
+
+->app.componenet.ts
+color(){
+  return 'red';
+}
+
+2. structural directive -> it focus on add or remove elements from the DOM

@@ -1,7 +1,17 @@
-<H1>jzfg</H1>
+<button (click)="blueClass = !blueClass" [ngClass]="{ blue: blueClass }">change</button>
+
+<hr>
+<h1>
+    jzfg</h1>
 <input (keyup)="changeImage($event)" [value]="imgUrl">
 <app-post [postUrl]="imgUrl" (imgSelected)="logImg($event)">
-    <p>
+    <p class="abc">
         Some Content
     </p>
 </app-post>
+<p>adfsg</p>
+<p [ngStyle]="{'background-color':color()}">Hello !!</p>
+<p>{{ currDate | date: 'MMM d y'}}</p>
+<p>{{ price | currency:'INR'}}</p>
+<p>{{ temp | number : '1.0-0'}}</p>
+<p>{{ pizza | json }}</p>
