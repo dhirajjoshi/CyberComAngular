@@ -143,3 +143,27 @@ color(){
 }
 
 2. structural directive -> it focus on add or remove elements from the DOM
+
+
+Services
+it can be injectable in 3 levels 
+1. globle level :- service_name.services.ts file me injectable deco.. bnakr usme providedIn:'root' dena 
+@Injecrable({
+providedIn:'root'  //ye angular ko btata hai ki keha se expose krna hai services ko root dala to services root se inject hogi taki vo koi b component me inject ho ske
+})
+2. module lavel :-pahle service file me se providedIn ko remove krna hai jis b module me dalna hai uski module file me providers add krna hai and service file ko import krna hai
+3. component level :- jis b component me add krna hai uski file me component deco.. me providers add krna hai and services importkrni hai component file me
+
+
+
+Templet Driven Form
+FormControl
+methods->
+dirty:
+errors:
+valid:
+invalid:
+pristine:
+touched:
+untouched:
+value:

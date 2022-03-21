@@ -1,0 +1,40 @@
+<form [formGroup]="fg" (ngSubmit)="login()">
+    <!-- Form Group -->
+    <div *ngIf=" fg?.errors " class="alert alert-danger ">
+        Username or password is Invalid
+    </div>
+    <!-- Account Form Group -->
+    <div formGroupName="account">
+        <!-- Username Form Control -->
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input formControlName='username' id="username" type="text" class="form-control ">
+            <!-- Validation -->
+            <div *ngIf="username?.pending "> Checking your name is unique or not</div>
+            <div *ngIf="username?.touched && username?.invalid " class="alert alert-danger ">
+                <div *ngIf="username?.errors?.[ 'required'] ">Username is Required</div>
+                <!-- <div *ngIf="username?.errors?.[ 'pattern'] ">Username Pattern Not Match</div> -->
+                <div *ngIf="username?.errors?.[ 'shouldBeUnique'] ">Username Already Taken</div>
+                <div *ngIf="username?.errors?.[ 'cannotContainSpace'] ">Username Cannot Contain Space</div>
+            </div>
+        </div>
+        <!-- Password Form Control -->
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input formControlName="password" id="password" type="text" class="form-control ">
+            <!-- Validation -->
+            <div *ngIf="password?.touched && password?.invalid " class="alert alert-danger ">
+                <div *ngIf="password?.errors?.[ 'required'] ">Password is Required</div>
+                <div *ngIf="password?.errors?.[ 'minlength'] ">Password Minimum Length is {{password?.errors?.['minlength'].requiredLength}}</div>
+            </div>
+        </div>
+    </div>
+    <!-- Account Form Group Over -->
+    <label for="topic">Topics</label>
+    <!-- Form Array -->
+    <input type="text" id='topic' class="form-control " (keyup.enter)="addTopic(topic) " #topic>
+    <ul class=" list-group ">
+        <li *ngFor="let topic of getControl()" (click)='removeTopic(topic)'>{{ topic.value }}</li>
+    </ul>
+    <button class="btn btn-primary " type="submit ">Sign Up</button>
+</form>

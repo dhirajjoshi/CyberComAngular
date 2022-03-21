@@ -1,0 +1,19 @@
+VS Code Shortcut
+
+ctrl+shift+n -> new window
+ctrl+, -> user setting
+ctrl+x -> cut
+ctrl+c -> copy
+ctrl+v -> paste
+alt+UpArrow/DownArrow -> move line up/down
+shift+alt+UpArrow/DownArrow -> copy line up/down
+ctrl+shift+k -> Delete Line
+ctrl+/ -> Toggle line Comment
+shift+alt+a-> Toggle Block Comment
+ctrl+f -> find
+ctrl+h ->Replace
+F2 -> Rename
+ctrl+n -> new File
+ctrl+o -> open File
+ctrl+s -> save file
+ctrl+space -> suggestion

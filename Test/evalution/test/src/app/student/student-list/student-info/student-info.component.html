@@ -1,0 +1,26 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Institute Name</th>
+            <th>City</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let std of data; let i = index;">
+            <td>{{i +1}}</td>
+            <td>{{std.first_name +" "+std.last_name}}</td>
+            <td>{{std.gender}}</td>
+            <td>{{std.institute_name}}</td>
+            <td>{{std.city}}</td>
+            <td>
+                <input type="button" value="Edit" (click)="editStudent()">
+                <input type="button" value="Delete" (click)="removeStudent(i-1)">
+            </td>
+        </tr>
+
+    </tbody>
+</table>
