@@ -22,11 +22,11 @@ export class AppComponent {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
     // Memory Leak
-    setInterval(()=>{
-      this.showModal= !this.showModal,
-      console.log(this.modal.visible);
-    }
-    ,5000)
+    // setInterval(()=>{
+    //   this.showModal= !this.showModal,
+    //   console.log(this.modal.visible);
+    // }
+    // ,5000)
   }
 
 

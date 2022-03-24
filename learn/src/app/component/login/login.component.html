@@ -1,0 +1,20 @@
+<form #loginForm="ngForm" (ngSubmit)="login()">
+    <!-- Email -->
+    <div class="mb-3">
+        <label class="inline-block mb-2">Email</label>
+        <input type="email" #email="ngModel" name="email" [(ngModel)]="credentials.email" placeholder="Enter Email" class="form-control" required pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+        />
+        <div class="text-red" *ngIf="email.errors && email.touched && email.dirty">
+            Email is Invalid
+        </div>
+    </div>
+    <!-- Password -->
+    <div class="mb-3">
+        <label class="inline-block mb-2">Password</label>
+        <input type="password" #password="ngModel" name="password" [(ngModel)]="credentials.password" placeholder="Enter Password" class="form-control" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" />
+    </div>
+    <div class="text-red" *ngIf="password.errors && password.touched && password.dirty">
+        Password is Invalid
+    </div>
+    <button type="submit" class="btn-primary disabled:opacity-50 disabled:bg-indigo-400" [disabled]="!loginForm.valid">Submit</button>
+</form>

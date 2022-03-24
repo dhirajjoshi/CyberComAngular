@@ -1,0 +1,15 @@
+<input [formControl]="control" [type]="type" style="margin: 0 20px 0 20px; " [mask]="format" class="form-control" [placeholder]="placeholder" />
+<ng-container *ngIf="control.touched && control.dirty">
+    <p *ngIf="control.errors?.['required']" style="color: red;">
+        This Field is Required</p>
+    <p *ngIf="control.errors?.['minlength']" style="color: red;">
+        Field Value must be greater than {{control.errors?.['minlength'].requiredLength }} char</p>
+    <p *ngIf="control.errors?.['email']" style="color: red;">
+        Must Enter valid Email</p>
+    <p *ngIf="control.errors?.['min']" style="color: red;">
+        User Must be Greater than {{control.errors?.['min'].min}}</p>
+    <p *ngIf="control.errors?.['max']" style="color: red;">
+        User Must be Less than {{control.errors?.['max'].max}}</p>
+    <p *ngIf="control.errors?.['pattern']" style="color: red;">
+        Password must be 8 char long,have al least 1 upper case, 1 lower case and 1 number</p>
+</ng-container>

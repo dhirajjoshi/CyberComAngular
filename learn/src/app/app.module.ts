@@ -8,6 +8,16 @@ import { DrivenFormComponent } from './component/driven-form/driven-form.compone
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReactiveFormComponent } from './component/reactive-form/reactive-form.component';
 import { FormControlComponent } from './component/form-control/form-control.component';
+import { InputComponent } from './shared/input/input.component';
+import { NgxMaskModule } from 'ngx-mask';
+import { AlertComponent } from './shared/alert/alert.component';
+import { LoginComponent } from './component/login/login.component';
+
+import { RxJSModule } from './module/rx-js/rx-js.module';
+import { ObservablesComponent } from './module/rx-js/observables/observables.component';
+import { FromComponent } from './module/rx-js/from/from.component';
+import { OfOperatorComponent } from './module/rx-js/of-operator/of-operator.component';
+import { FromEventComponent } from './module/rx-js/from-event/from-event.component';
 
 @NgModule({
   declarations: [
@@ -17,11 +27,20 @@ import { FormControlComponent } from './component/form-control/form-control.comp
     DrivenFormComponent,
     ReactiveFormComponent,
     FormControlComponent,
+    InputComponent,
+    AlertComponent,
+    LoginComponent,
+    ObservablesComponent,
+    FromEventComponent,
+    FromComponent,
+    OfOperatorComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,                               
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxMaskModule.forRoot(),
+    RxJSModule
   ],
   providers: [],
   bootstrap: [AppComponent]
