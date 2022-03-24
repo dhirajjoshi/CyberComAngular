@@ -16,7 +16,6 @@ export class FromComponent{
       },
       complete(){
         console.log("complete");
-        
       }
     })
   }

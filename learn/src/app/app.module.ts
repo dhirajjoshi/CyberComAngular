@@ -18,6 +18,12 @@ import { ObservablesComponent } from './module/rx-js/observables/observables.com
 import { FromComponent } from './module/rx-js/from/from.component';
 import { OfOperatorComponent } from './module/rx-js/of-operator/of-operator.component';
 import { FromEventComponent } from './module/rx-js/from-event/from-event.component';
+import { CustomObservableComponent } from './module/rx-js/custom-observable/custom-observable.component';
+import { MapComponent } from './module/rx-js/map/map.component';
+import { TapComponent } from './module/rx-js/tap/tap.component';
+import { MergeallComponent } from './module/rx-js/mergeall/mergeall.component';
+import { mergeMap } from 'rxjs';
+import { MergemapComponent } from './module/rx-js/mergemap/mergemap.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +39,12 @@ import { FromEventComponent } from './module/rx-js/from-event/from-event.compone
     ObservablesComponent,
     FromEventComponent,
     FromComponent,
-    OfOperatorComponent
+    OfOperatorComponent,
+    CustomObservableComponent,
+    MapComponent,
+    TapComponent,
+    MergeallComponent,
+    MergemapComponent
   ],
   imports: [
     BrowserModule,
