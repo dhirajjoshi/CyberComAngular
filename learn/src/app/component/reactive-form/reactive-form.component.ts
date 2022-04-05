@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup,FormControl, Validators, FormArray, AbstractControl, FormBuilder } from '@angular/forms';
+import { FormControl, Validators, FormArray, AbstractControl, FormBuilder } from '@angular/forms';
 import { CustomVelidators } from './custom.validators';
 
 @Component({
