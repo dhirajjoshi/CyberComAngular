@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BlogComponent } from './blog/blog.component';
+import { UploadComponent } from './upload/upload.component';
 
 const routes: Routes = [
   {
@@ -9,6 +10,17 @@ const routes: Routes = [
     data:{
       authOnlt:true
     }
+  },
+  {
+    path:'upload',
+    component:UploadComponent,
+    data:{
+      authOnlt:true
+    }
+  },
+  {
+    path:'upload-clip',
+    redirectTo:'upload'
   }
 ];
 

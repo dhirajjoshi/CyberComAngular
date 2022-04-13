@@ -1,0 +1,9 @@
+<p>upload works!</p>
+<button routerLink="/clip/1" class="btn">clip 1</button>
+<button routerLink="/clip/2" class="btn">clip 2</button>
+<button routerLink="/clip/3" class="btn">clip 3</button>
+<select (change)="select($event)">
+    <option value="1" [selected]="selectValue==='1'">One</option>
+    <option value="2" [selected]="selectValue==='2'">Two</option>
+</select>
+<!-- <h1>{{selectValue}}</h1> -->

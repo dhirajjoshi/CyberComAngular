@@ -62,7 +62,8 @@ export class RegisterComponent {
         name:this.name.value,
         email:this.email.value,
         age:this.age.value,
-        phone:this.phone.value
+        phone:this.phone.value,
+        password:this.password.value
       })
       this.inProcess=false
       alert("Success")

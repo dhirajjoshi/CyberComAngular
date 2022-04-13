@@ -8,6 +8,8 @@ import { AboutComponent } from './component/about/about.component';
 import { NavComponent } from './component/nav/nav.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { ResourceModule } from './resource/resource.module';
+import { ClipComponent } from './clip/clip.component';
+import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { ResourceModule } from './resource/resource.module';
     HomeComponent,
     AboutComponent,
     NavComponent,
-    ContactComponent
+    ContactComponent,
+    ClipComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
+    ResourceModule,
     AppRoutingModule,
-    ResourceModule
   ],
   providers: [],
   bootstrap: [AppComponent]
